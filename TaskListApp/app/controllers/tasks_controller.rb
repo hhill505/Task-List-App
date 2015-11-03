@@ -10,11 +10,13 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @task_lists = TaskList.all
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    @task_lists = TaskList.all
   end
 
   # GET /tasks/1/edit
