@@ -33,7 +33,7 @@
   </div>
   <div class = "field">
     <%= f.label :Task_List %>
-    <%= f.collection_select :task_list, @task_lists, :id, :Name, prompt: "Please select a Task List" %>
+    <%= f.collection_select :task_list, @task_lists, :id, :Name, prompt: "Please select a list..." %>
   </div>
   <div class="actions">
     <%= f.submit %>

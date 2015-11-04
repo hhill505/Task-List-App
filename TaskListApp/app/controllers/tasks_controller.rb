@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    @task_lists = TaskList.all
   end
 
   # POST /tasks
