@@ -2,19 +2,22 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @task_list.Name %>
+  <%= @task_list.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @task_list.Description %>
+  <%= @task_list.description %>
 </p>
+
 <p>
-	<strong>Tasks:</strong>
-		<%= @task_list.tasks.Title %>
-  <%# jarp: what is the end tag doing here? what is it ending? %>
-	<% end %>
+  <h3>Tasks</h3>
 </p>
+<ul>
+  <% @task_list.tasks.each do | task | %>
+    <li><%= task.title %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_task_list_path(@task_list) %> |
 <%= link_to 'Back', task_lists_path %>

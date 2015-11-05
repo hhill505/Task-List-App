@@ -2,32 +2,30 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @task.Title %>
+  <%= @task.title %>
 </p>
-
 <p>
   <strong>Task List</strong>
-  <%= @task.task_list.Name %>
+  <%# @task.task_list.name %>
 </p>
-
 <p>
   <strong>Description:</strong>
-  <%= @task.Description %>
+  <%= @task.description %>
 </p>
 
 <p>
   <strong>Priority:</strong>
-  <%= @task.Priority %>
+  <%= @task.priority %>
 </p>
 
 <p>
   <strong>Due date:</strong>
-  <%= @task.Due_Date %>
+  <%= @task.due_date %>
 </p>
 
 <p>
-  <strong>Is completed toggle:</strong>
-  <%= @task.Is_Completed_Toggle %>
+  <strong>Is complete:</strong>
+  <%= @task.is_complete %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

@@ -12,28 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Title %><br>
-    <%= f.text_field :Title %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :Description %><br>
-    <%= f.text_area :Description %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :Priority %><br>
-    <%= f.text_field :Priority %>
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class ="field">
+      <%= f.label :task_list %><br>
+      <%= f.collection_select :task_list, @task_lists, :id, :name, prompt: "Please select a list..." %>
   </div>
   <div class="field">
-    <%= f.label :Due_Date %><br>
-    <%= f.date_select :Due_Date %>
+    <%= f.label :due_date %><br>
+    <%= f.date_select :due_date %>
   </div>
   <div class="field">
-    <%= f.label :Is_Completed_Toggle %><br>
-    <%= f.check_box :Is_Completed_Toggle %>
-  </div>
-  <div class = "field">
-    <%= f.label :Task_List %>
-    <%= f.collection_select :task_list, @task_lists, :id, :Name, prompt: "Please select a list..." %>
+    <%= f.label :is_complete %><br>
+    <%= f.check_box :is_complete %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -6,11 +6,11 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Task List</th>
       <th>Description</th>
       <th>Priority</th>
       <th>Due date</th>
-      <th>Is completed toggle</th>
-      <th>List</th>
+      <th>Is complete</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +18,12 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.Title %></td>
-        <td><%= task.Description %></td>
-        <td><%= task.Priority %></td>
-        <td><%= task.Due_Date %></td>
-        <td><%= task.Is_Completed_Toggle %></td>
-        
+        <td><%= task.title %></td>
+        <td><%= task.task_list.name %></td>
+        <td><%= task.description %></td>
+        <td><%= task.priority %></td>
+        <td><%= task.due_date %></td>
+        <td><%= task.is_complete %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>

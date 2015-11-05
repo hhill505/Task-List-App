@@ -5,13 +5,11 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
-    
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    @task_lists = TaskList.all
   end
 
   # GET /tasks/new
@@ -22,6 +20,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    
     @task_lists = TaskList.all
   end
 
@@ -73,6 +72,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:Title, :Description, :Priority, :Due_Date, :Is_Completed_Toggle)
+      params.require(:task).permit(:title, :description, :priority, :due_date, :is_complete)
     end
 end

@@ -1,4 +1,4 @@
 json.array!(@tasks) do |task|
-  json.extract! task, :id, :Title, :Description, :Priority, :Due_Date, :Is_Completed_Toggle
+  json.extract! task, :id, :title, :description, :priority, :due_date, :is_complete
   json.url task_url(task, format: :json)
 end
