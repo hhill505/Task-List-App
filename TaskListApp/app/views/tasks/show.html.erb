@@ -4,10 +4,7 @@
   <strong>Title:</strong>
   <%= @task.title %>
 </p>
-<p>
-  <strong>Task List</strong>
-  <%# @task.task_list.name %>
-</p>
+
 <p>
   <strong>Description:</strong>
   <%= @task.description %>
@@ -15,17 +12,22 @@
 
 <p>
   <strong>Priority:</strong>
-  <%= @task.priority %>
+  <%= @task.priorit %>
 </p>
 
 <p>
-  <strong>Due date:</strong>
-  <%= @task.due_date %>
+  <strong>Due Date:</strong>
+  <%= @task.duedate %>
 </p>
 
 <p>
-  <strong>Is complete:</strong>
-  <%= @task.is_complete %>
+  <strong>Is Completed:</strong>
+  <%= @task.iscompleted %>
+</p>
+
+<p>
+  <strong>Tasklist:</strong>
+  <%= @task.tasklist.name %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
