@@ -13,6 +13,7 @@
 <h3>Tasks</h3>
 
 <ul>
+<%# jarp: it's better to use a real word like 'task' instead of a single letter. variables should be descriptive/readable %>
 <% @tasklist.tasks.each do |i| %>
 	<li> <%= i.title %> </li>
 <% end %>

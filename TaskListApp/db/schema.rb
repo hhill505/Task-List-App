@@ -11,6 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# jarp: what happened to your migrations?
+
 ActiveRecord::Schema.define(version: 20151106051630) do
 
   create_table "tasklists", force: :cascade do |t|
