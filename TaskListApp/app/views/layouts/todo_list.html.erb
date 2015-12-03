@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'defaults', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+	<h1>Task Manager</h1>
+</header>
+<div id = "primary">
+<main>
+<%= yield %>
+</main>
+</div>
+
+<div id = "sidebar">
+	<h2>Task Lists</h2>
+	<ul>
+		<% @all_task_lists.each do |t| %>
+			<li><%= link_to t.name, t %> </li>
+		<% end %> 
+	</ul>
+	<p><%= link_to "Add New Task", new_task_path %> </p>
+</div>
+
+<footer>
+	<p>Copyright 2015 </p>
+</footer>
+
+</body>
+</html>
