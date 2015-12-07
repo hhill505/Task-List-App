@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106051630) do
+ActiveRecord::Schema.define(version: 20151207005250) do
 
   create_table "tasklists", force: :cascade do |t|
     t.string   "name"
@@ -29,8 +29,18 @@ ActiveRecord::Schema.define(version: 20151106051630) do
     t.integer  "tasklist_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
 
   add_index "tasks", ["tasklist_id"], name: "index_tasks_on_tasklist_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

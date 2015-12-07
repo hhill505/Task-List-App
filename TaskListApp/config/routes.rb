@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'login/index'
+
+  get 'login/authenticate'
+
+  get 'login/logout'
+
+  get 'home/index'
+
+  resources :users
   resources :tasks
   resources :tasklists
 
