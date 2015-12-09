@@ -1,4 +1,4 @@
-class TasklistsController < ApplicationController
+class TasklistsController < ProtectedController
   before_action :set_tasklist, only: [:show, :edit, :update, :destroy]
 
   # GET /tasklists
